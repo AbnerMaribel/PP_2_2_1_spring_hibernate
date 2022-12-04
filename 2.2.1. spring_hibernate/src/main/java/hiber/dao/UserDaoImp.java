@@ -26,4 +26,8 @@ public class UserDaoImp implements UserDao {
       return query.getResultList();
    }
 
+   public User getUserByCar(String model, int series) {
+      from users where
+   }
+
 }

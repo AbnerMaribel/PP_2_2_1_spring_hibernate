@@ -18,6 +18,8 @@ public class User {
 
    @Column(name = "email")
    private String email;
+   @OneToOne
+   private Car car;
 
    public User() {}
    
@@ -25,6 +27,14 @@ public class User {
       this.firstName = firstName;
       this.lastName = lastName;
       this.email = email;
+   }
+
+   public User(Long id, String firstName, String lastName, String email, Car car) {
+      this.id = id;
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.email = email;
+      this.car = car;
    }
 
    public Long getId() {
@@ -58,4 +68,8 @@ public class User {
    public void setEmail(String email) {
       this.email = email;
    }
+
+
+
+
 }
